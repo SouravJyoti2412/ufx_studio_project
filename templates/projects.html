@@ -1,0 +1,87 @@
+{% extends 'bash.html' %}
+{% block content %}
+  {% load static %}
+    <section class="wrapper bg-gray">
+      <div class="container py-12 py-md-16 text-center">
+        <div class="row">
+          <div class="col-lg-10 col-xxl-8 mx-auto">
+            <h1 class="display-1 mb-1">Check out some of our awesome projects with creative ideas.</h1>
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+      <section class="wrapper bg-light wrapper-border">
+        <div class="container py-11">
+          <h2 class="h5">Filter Catagory</h2>
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item me-1 mb-2"><a href="{% url 'projects' %}" class="btn btn-soft-ash btn-sm rounded text-primary">All Projects</a></li>
+            <li class="list-inline-item me-1 mb-2"><a href="#" class="btn btn-soft-ash btn-sm rounded ">Websites</a></li>
+            <li class="list-inline-item me-1 mb-2"><a href="#" class="btn btn-soft-ash btn-sm rounded ">Grapichs Design</a></li>
+            <li class="list-inline-item me-1 mb-2"><a href="#" class="btn btn-soft-ash btn-sm rounded ">3d Animation</a></li>
+          </ul>
+        </div> 
+       
+      
+    </section>
+    
+      {% for i in  all_project %}
+      
+    <section class="wrapper bg-light">
+      <div class="container py-14 py-md-16">
+        <div class="row mt-6">
+          <div class="col-xl-10 mx-auto">
+            <div class="projects-tiles">
+              <div class="project grid grid-view">
+                <div class="row g-6 isotope">
+                
+              
+               
+              
+              <div class="project grid grid-view">
+                <div class="row g-6 isotope">
+                  <div class="item col-md-6">
+                    <div class="project-details d-flex justify-content-center flex-column">
+                      <div class="post-header">
+                        <div class="post-category text-yellow mb-3">Concept</div>
+                        <h2 class="post-title mb-3">{{i.project_name}}</h2>
+                      </div>
+                      <!-- /.post-header -->
+                      <div class="post-content">
+                        <p>{{i.project_shot_des_in_100_word|truncatewords:100}}</p>
+                        <a href="/project_details/{{i.title_slug}}" class="more hover link-yellow">See Project</a>
+                      </div>
+                      <!-- /.post-content -->
+                    </div>
+                    <!-- /.project-details -->
+                  </div>
+                  <!-- /.item -->
+                  <div class="item col-md-6">
+                    <figure class="itooltip itooltip-light hover-scale rounded" title='<h5 class="mb-0">mobile view</h5>'><a href="/media/{{i.slot1_900x800px}}" data-glightbox="title: mobile view " data-gallery="project-2"> <img src="/media/{{i.slot1_900x800px}}" alt="" /></a>
+                    </figure>
+                  </div>
+                  <!-- /.item -->
+                  <div class="item col-md-6">
+                    <figure class="itooltip itooltip-light hover-scale rounded" title='<h5 class="mb-0">computer view</h5>'><a href="/media/{{i.slot2_900x800px}}" data-glightbox="title: computer view" data-gallery="project-2"> <img src="/media/{{i.slot2_900x800px}}" alt="" /></a>
+                    </figure>
+                  </div>
+                  <!-- /.item -->
+                  <div class="item col-md-6">
+                    <figure class="itooltip itooltip-light hover-scale rounded" title='<h5 class="mb-0">admin panel</h5>'><a href="/media/{{i.slot3_900x800px}}" data-glightbox="title: admin panel" data-gallery="project-2"> <img src="/media/{{i.slot3_900x800px}}" alt="" /></a>
+                    </figure>
+                  </div>
+                  <!-- /.item -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- /.project -->
+      </div>
+      <!-- /.container -->
+    </section>
+    
+    {% endfor %}
+    <!-- /section -->
+  </div>
+  <!-- /.content-wrapper -->
+  {% endblock %}

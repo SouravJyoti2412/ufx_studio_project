@@ -1,0 +1,396 @@
+{% extends 'bash.html' %}
+{% block content %}
+  {% load static %}
+  
+    <section class="wrapper bg-soft-primary position-relative">
+      {% for message in messages %}
+       {% if "career" in message.tags %}
+        <div class="alert alert-success" role="alert">
+        {{message}}
+       </div>
+  
+      {% endif %}
+      {% endfor %}
+      <div class="container pt-10 pb-17 pt-md-14 text-center">
+        
+        <div class="row">
+          <div class="col-lg-8 mx-auto mb-5">
+            <h1 class="fs-15 text-uppercase text-muted mb-3">Join Our Team</h1>
+            <h3 class="display-1 mb-6">Join our team to help shape the future of development.</h3>
+            <a href="#position" class="btn btn-lg btn-primary rounded-pill">Explore Positions</a>
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+      <div class="overflow-hidden">
+        <div class="divider text-light mx-n2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60">
+            <path fill="currentColor" d="M0,0V60H1440V0A5771,5771,0,0,1,0,0Z" />
+          </svg>
+        </div>
+      </div>
+    </section>
+    <!-- /section -->
+    <section class="wrapper bg-light">
+      <div class="container pb-15 pb-md-17">
+        <div class="row gx-md-5 gy-5 mt-n18 mt-md-n19">
+          <div class="col-md-6 col-xl-3">
+            <div class="card lift">
+              <div class="card-body">
+                <img src={% static "./assets/img/icons/solid/target.svg" %} class="svg-inject icon-svg icon-svg-sm solid-mono text-primary mb-3" alt="" />
+                <h4>Career Growth</h4>
+                <p class="mb-0">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.</p>
+              </div>
+              <!--/.card-body -->
+            </div>
+            <!--/.card -->
+          </div>
+          <!--/column -->
+          <div class="col-md-6 col-xl-3">
+            <div class="card lift">
+              <div class="card-body">
+                <img src={% static "./assets/img/icons/solid/videocall.svg" %} class="svg-inject icon-svg icon-svg-sm solid-mono text-primary mb-3" alt="" />
+                <h4>Work From Anywhere</h4>
+                <p class="mb-0">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.</p>
+              </div>
+              <!--/.card-body -->
+            </div>
+            <!--/.card -->
+          </div>
+          <!--/column -->
+          <div class="col-md-6 col-xl-3">
+            <div class="card lift">
+              <div class="card-body">
+                <img src={% static "./assets/img/icons/solid/wallet.svg" %} class="svg-inject icon-svg icon-svg-sm solid-mono text-primary mb-3" alt="" />
+                <h4>Smart Salary</h4>
+                <p class="mb-0">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.</p>
+              </div>
+              <!--/.card-body -->
+            </div>
+            <!--/.card -->
+          </div>
+          <!--/column -->
+          <div class="col-md-6 col-xl-3">
+            <div class="card lift">
+              <div class="card-body">
+                <img src={% static "./assets/img/icons/solid/alarm.svg" %} class="svg-inject icon-svg icon-svg-sm solid-mono text-primary mb-3" alt="" />
+                <h4>Flexible Hours</h4>
+                <p class="mb-0">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.</p>
+              </div>
+              <!--/.card-body -->
+            </div>
+            <!--/.card -->
+          </div>
+          <!--/column -->
+        </div>
+        <!--/.row -->
+        
+          <!--/column -->
+          
+        <!--/.row -->
+        <hr class="my-14 my-md-17" />
+        <div class="row text-center">
+          <div class="col-xl-10 mx-auto">
+            <h2 class="fs-15 text-uppercase text-muted mb-3">Job Positions</h2>
+            <h3 class="display-4 mb-10 px-xxl-15">We’re always searching for amazing people to join our team. Take a look at our current openings.</h3>
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+        <div class="row">
+          <div class="col-xl-10 mx-auto">
+            <form class="filter-form mb-10">
+              <div class="row">
+                <div class="col-md-4 mb-3">
+                  <div class="form-select-wrapper">
+                    <select class="form-select" aria-label="">
+                      <option selected>Position</option>
+                      <option value="position1">Business</option>
+                      <option value="position2">Design</option>
+                      <option value="position3">Development</option>
+                      <option value="position4">Engineering</option>
+                      <option value="position5">Finance</option>
+                      <option value="position6">Marketing</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <div class="form-select-wrapper">
+                    <select class="form-select" aria-label="">
+                      <option selected>Type</option>
+                      <option value="type1">Full-time</option>
+                      <option value="type3">Part-time</option>
+                      <option value="type4">Remote</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <div class="form-select-wrapper">
+                    <select class="form-select" aria-label="">
+                      <option selected>Location</option>
+                      <option value="location1">Chicago, US</option>
+                      <option value="location3">Michigan, US</option>
+                      <option value="location2">New York, US</option>
+                      <option value="location4">Los Angles, US</option>
+                      <option value="location5">Moscow, Russia</option>
+                      <option value="location6">Sydney, Australia</option>
+                      <option value="location7">Birmingham, UK</option>
+                      <option value="location8">Manchester, UK</option>
+                      <option value="location9">Beijing, China</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="job-list mb-10">
+              <h3 class="mb-4">Design</h3>
+              <a href="#" class="card mb-4 lift">
+                <div class="card-body p-5">
+                  <span class="row justify-content-between align-items-center">
+                    <span class="col-md-5 mb-2 mb-md-0 d-flex align-items-center text-body">
+                      <span class="avatar bg-red text-white w-9 h-9 fs-17 me-3">GD</span> Senior Graphic Designer </span>
+                    <span class="col-5 col-md-3 text-body d-flex align-items-center">
+                      <i class="uil uil-clock me-1"></i> Full time </span>
+                    <span class="col-7 col-md-4 col-lg-3 text-body d-flex align-items-center">
+                      <i class="uil uil-location-arrow me-1"></i> San Francisco, US </span>
+                    <span class="d-none d-lg-block col-1 text-center text-body">
+                      <i class="uil uil-angle-right-b"></i>
+                    </span>
+                  </span>
+                </div>
+                <!-- /.card-body -->
+              </a>
+              <!-- /.card -->
+              <a href="#" class="card mb-4 lift">
+                <div class="card-body p-5">
+                  <span class="row justify-content-between align-items-center">
+                    <span class="col-md-5 mb-2 mb-md-0 d-flex align-items-center text-body">
+                      <span class="avatar bg-green text-white w-9 h-9 fs-17 me-3">UX</span> UI/UX Designer </span>
+                    <span class="col-5 col-md-3 text-body d-flex align-items-center">
+                      <i class="uil uil-clock me-1"></i> Remote </span>
+                    <span class="col-7 col-md-4 col-lg-3 text-body d-flex align-items-center">
+                      <i class="uil uil-location-arrow me-1"></i> Anywhere </span>
+                    <span class="d-none d-lg-block col-1 text-center text-body">
+                      <i class="uil uil-angle-right-b"></i>
+                    </span>
+                  </span>
+                </div>
+                <!-- /.card-body -->
+              </a>
+              <!-- /.card -->
+              <a href="#" class="card mb-4 lift">
+                <div class="card-body p-5">
+                  <span class="row justify-content-between align-items-center">
+                    <span class="col-md-5 mb-2 mb-md-0 d-flex align-items-center text-body">
+                      <span class="avatar bg-yellow text-white w-9 h-9 fs-17 me-3">AN</span> Multimedia Artist &amp; Animator </span>
+                    <span class="col-5 col-md-3 text-body d-flex align-items-center">
+                      <i class="uil uil-clock me-1"></i> Full time </span>
+                    <span class="col-7 col-md-4 col-lg-3 text-body d-flex align-items-center">
+                      <i class="uil uil-location-arrow me-1"></i> Birmingham, UK </span>
+                    <span class="d-none d-lg-block col-1 text-center text-body">
+                      <i class="uil uil-angle-right-b"></i>
+                    </span>
+                  </span>
+                </div>
+                <!-- /.card-body -->
+              </a>
+              <!-- /.card -->
+            </div>
+            <div class="job-list">
+              <h3 class="mb-4">Development</h3>
+              <a href="#" class="card mb-4 lift">
+                <div class="card-body p-5">
+                  <span class="row justify-content-between align-items-center">
+                    <span class="col-md-5 mb-2 mb-md-0 d-flex align-items-center text-body">
+                      <span class="avatar bg-purple text-white w-9 h-9 fs-17 me-3">FE</span> Front End Developer </span>
+                    <span class="col-5 col-md-3 text-body d-flex align-items-center">
+                      <i class="uil uil-clock me-1"></i> Part time </span>
+                    <span class="col-7 col-md-4 col-lg-3 text-body d-flex align-items-center">
+                      <i class="uil uil-location-arrow me-1"></i> Sydney, AU </span>
+                    <span class="d-none d-lg-block col-1 text-center text-body">
+                      <i class="uil uil-angle-right-b"></i>
+                    </span>
+                  </span>
+                </div>
+                <!-- /.card-body -->
+              </a>
+              <!-- /.card -->
+              <a href="#" class="card mb-4 lift">
+                <div class="card-body p-5">
+                  <span class="row justify-content-between align-items-center">
+                    <span class="col-md-5 mb-2 mb-md-0 d-flex align-items-center text-body">
+                      <span class="avatar bg-orange text-white w-9 h-9 fs-17 me-3">MD</span> Mobile Developer </span>
+                    <span class="col-5 col-md-3 text-body d-flex align-items-center">
+                      <i class="uil uil-clock me-1"></i> Full-time </span>
+                    <span class="col-7 col-md-4 col-lg-3 text-body d-flex align-items-center">
+                      <i class="uil uil-location-arrow me-1"></i> San Francisco, US </span>
+                    <span class="d-none d-lg-block col-1 text-center text-body">
+                      <i class="uil uil-angle-right-b"></i>
+                    </span>
+                  </span>
+                </div>
+                <!-- /.card-body -->
+              </a>
+              <!-- /.card -->
+              <a href="#" class="card mb-4 lift">
+                <div class="card-body p-5">
+                  <span class="row justify-content-between align-items-center">
+                    <span class="col-md-5 mb-2 mb-md-0 d-flex align-items-center text-body">
+                      <span class="avatar bg-pink text-white w-9 h-9 fs-17 me-3">NT</span> .NET Developer </span>
+                    <span class="col-5 col-md-3 text-body d-flex align-items-center">
+                      <i class="uil uil-clock me-1"></i> Full time </span>
+                    <span class="col-7 col-md-4 col-lg-3 text-body d-flex align-items-center">
+                      <i class="uil uil-location-arrow me-1"></i> Manchester, UK </span>
+                    <span class="d-none d-lg-block col-1 text-center text-body">
+                      <i class="uil uil-angle-right-b"></i>
+                    </span>
+                  </span>
+                </div>
+                <!-- /.card-body -->
+              </a>
+              <!-- /.card -->
+            </div>
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <div class="row" id="position">
+      <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
+        <h2 class="display-4 mb-3 text-center">Please fill the details for apply job </h2>
+        <p class="lead text-center mb-10">Reach out to us from our contact form and we will get back to you shortly.</p>
+        
+        <form class="contact-form" method="post" action="{% url 'career' %}" enctype = "multipart/form-data">
+          {% csrf_token %}
+          <div class="messages"></div>
+          <div class="row gx-4">
+            <div class="col-md-6">
+              <div class="form-floating mb-4">
+                <input id="form_name" type="text" name="name" class="form-control" placeholder="Jane" required>
+                <label for="form_name">First Name *</label>
+                <div class="valid-feedback"> Looks good! </div>
+                <div class="invalid-feedback"> Please enter your first name. </div>
+              </div>
+            </div>
+            <!-- /column -->
+            <div class="col-md-6">
+              <div class="form-floating mb-4">
+                <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Doe" required>
+                <label for="form_lastname">Last Name *</label>
+                <div class="valid-feedback"> Looks good! </div>
+                <div class="invalid-feedback"> Please enter your last name. </div>
+              </div>
+            </div>
+            <!-- /column -->
+            <div class="col-md-6">
+              <div class="form-floating mb-4">
+                <input id="form_Phnum" type="number" name="phone" class="form-control" placeholder="Doe" required>
+                <label for="form_Phnum">Ph no *</label>
+                <div class="valid-feedback"> Looks good! </div>
+                <div class="invalid-feedback"> Please enter your 10 digit ph number</div>
+              </div>
+            </div>
+            <!-- /column -->
+            
+            <div class="col-md-6">
+              <div class="form-floating mb-4">
+                <input id="form_email" type="email" name="email" class="form-control" placeholder="jane.doe@example.com" required>
+                <label for="form_email">Email *</label>
+                <div class="valid-feedback"> Looks good! </div>
+                <div class="invalid-feedback"> Please provide a valid email address. </div>
+              </div>
+            </div>
+            <!-- /column -->
+            
+            <div class="col-md-6">
+              <div class="form-floating mb-4">
+                <input id="form_cv" type="file" name="cv_upload"  accept="application/pdf" class="form-control"  required>
+                <label for="form_cv">upload your cv *</label>
+                <div class="valid-feedback"> Looks good! </div>
+                <div class="invalid-feedback"> please upload your cv  </div>
+              </div>
+            </div>
+            <!-- /column -->
+            <div class="col-md-6">
+              <div class="form-floating mb-4">
+                <input id="form_Experiance" type="number" name="Experiance_year" class="form-control" placeholder="1 or 2" required>
+                <label for="form_Experiance">Years of Experiance *</label>
+                <div class="valid-feedback"> Looks good! </div>
+                <div class="invalid-feedback"> Please enter Your experiance year</div>
+              </div>
+            </div>
+            <!-- /column -->
+            <div class="col-md-6">
+              <div class="form-floating mb-4">
+                <input id="form_skill" type="text" name="Skills" class="form-control" placeholder="php , java etc" required>
+                <label for="form_skill">Skills *</label>
+                <div class="valid-feedback"> Looks good! </div>
+                <div class="invalid-feedback"> Please enter Your skills</div>
+              </div>
+            </div>
+            <!-- /column -->
+            <div class="col-md-6">
+              <div class="form-select-wrapper mb-4">
+                <select class="form-select" id="form-select" name="job_profile" required>
+                  <option selected disabled value="">Select your Profile</option>
+                  <option value="Full stack web developer">Full stack web developer</option>
+                  <option value="Graphic Designer">Graphic Designer</option>
+                  <!-- <option value="Customer Support">Customer Support</option> -->
+                </select>
+                <div class="valid-feedback"> Looks good! </div>
+                <div class="invalid-feedback"> Please select a job Profile. </div>
+              </div>
+            </div>
+            <!-- /column -->
+            <div class="col-12">
+              <div class="form-floating mb-4">
+                <textarea id="form_message" name="address" class="form-control" placeholder="Your message" style="height: 100px" required></textarea>
+                <label for="form_message">Address *</label>
+                <div class="valid-feedback"> Looks good! </div>
+                <div class="invalid-feedback"> Please enter your Address. </div>
+              </div>
+            </div>
+  
+            
+            <!-- /column -->
+            <div class="col-12 text-center">
+              <input type="submit" class="btn btn-primary rounded-pill btn-send mb-3" value="Send message">
+              <p class="text-muted"><strong>*</strong> These fields are required.</p>
+            </div>
+            <!-- /column -->
+          </div>
+          <!-- /.row -->
+        </form>
+        <!-- /form -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    <!-- /section -->
+    <section class="wrapper bg-soft-primary">
+      <div class="container py-14 py-md-16">
+        <div class="row">
+          <div class="col-lg-10 col-xl-9 col-xxl-8 mx-auto text-center">
+            <h2 class="fs-15 text-uppercase text-muted mb-3">Can't find the right position?</h2>
+            <h3 class="display-4 mb-7 px-lg-5 px-xl-0 px-xxl-5">We are a community with 5000+ team members. Join and build the future with us.</h3>
+            <a href="{% url 'contact' %}" class="btn btn-lg btn-primary rounded-pill">Contact Us</a>
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+  </div>
+  <!-- /.content-wrapper -->
+
+
+
+  
+</div>
+  {% endblock %}
